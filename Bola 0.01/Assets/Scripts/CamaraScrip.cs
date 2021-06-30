@@ -32,6 +32,8 @@ public class CamaraScrip : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        Vector3 look = transform.position + new Vector3(0, 1, 0);
+        t_cam.LookAt(look);
     }
     private void Update()
     {
@@ -61,7 +63,7 @@ public class CamaraScrip : MonoBehaviour
         }
         else
         {
-            Debug.DrawLine(this.transform.position, this.transform.position + cam_offset, Color.red);
+            Debug.DrawLine(this.transform.position, this.transform.position + cam_offset, Color.green);
         }
         if (hitdistance > 14)
         {
@@ -70,7 +72,7 @@ public class CamaraScrip : MonoBehaviour
     }
     void Coaliciones()
     {
-        newposition = hit.point - Vector3.forward * 0.1f;
+        newposition = hit.point - Vector3.forward * 0.1f + Vector3.up * 0.8f;
         if (hitdistance > 0)
         {
             t_cam.localPosition = newposition;
@@ -80,19 +82,20 @@ public class CamaraScrip : MonoBehaviour
     {
         h = Input.GetAxis("Mouse X");
         v = Input.GetAxis("Mouse Y");
-        if (h != 0)
-        {
-            transform.Rotate(Vector3.up, h * 90 * Sensibilidad_X * Time.deltaTime);
-        }
-        if (v != 0)
-        {
-            t_cam.RotateAround(transform.position, transform.right, v * 90 * Sensibilidad_Y * Time.deltaTime);
-        }
+        //Lo saco porque no estoy seguro lo que modifica, puede se que con skins lo averigue.
+            //if (h != 0)
+            //{
+            //    transform.Rotate(Vector3.up, h * 90 * Sensibilidad_X * Time.deltaTime);
+            //}
+            //if (v != 0)
+            //{
+            //    t_cam.RotateAround(transform.position, transform.right, v * 90 * Sensibilidad_Y * Time.deltaTime);
+            //}
 
         cam_offset = Quaternion.AngleAxis(h * Sensibilidad_X, Vector3.up) * cam_offset;
         t_cam.localPosition = Vector3.Lerp(t_cam.localPosition, transform.position + cam_offset, latencia);
-        Vector3 ea = t_cam.rotation.eulerAngles;
-        t_cam.rotation = Quaternion.Euler(new Vector3(ea.x, ea.y, 0));
+            //Vector3 ea = t_cam.rotation.eulerAngles;
+            //t_cam.rotation = Quaternion.Euler(new Vector3(ea.x, ea.y, 0));
     }
     void Zoom()
     {
