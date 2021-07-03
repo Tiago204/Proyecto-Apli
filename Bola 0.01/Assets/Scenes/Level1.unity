@@ -551,11 +551,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9f85db48f403844823da9208606789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  empty: {fileID: 1073724662}
   t_cam: {fileID: 963194228}
-  Sensibilidad_X: 1.5
+  Sensibilidad_X: 1
   Sensibilidad_Y: 0
-  latencia: 0.05
+  latencia: 0.03
   cam_offset: {x: 0, y: 1.5, z: -5}
   blockcursor: 1
   HabilitarZoom: 0
@@ -572,9 +571,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2143309567}
-  camaraScrip: {fileID: 2143309565}
   maincam: {fileID: 963194227}
-  fuerza: 200
+  fuerza: 10
+  MaxAcceleration: 10
 --- !u!54 &2143309567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -688,8 +687,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 648867241127695365, guid: 6be7c31290c233942ad283f89c6c03c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 648867241127695365, guid: 6be7c31290c233942ad283f89c6c03c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 648867241127695365, guid: 6be7c31290c233942ad283f89c6c03c1, type: 3}
       propertyPath: m_LocalPosition.y

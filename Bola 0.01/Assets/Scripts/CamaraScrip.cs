@@ -5,11 +5,10 @@ using UnityEngine;
 public class CamaraScrip : MonoBehaviour
 {
     [Header("Pre-Game Conf")]
-    public Transform empty;
     public Transform t_cam;
     [Header("Configuración")]
-    public float Sensibilidad_X = 5.0f;
-    public float Sensibilidad_Y = 3.0f;
+    public float Sensibilidad_X;
+    public float Sensibilidad_Y;
     [Range(0, 1)] public float latencia;
     public Vector3 cam_offset;
     public bool blockcursor;
@@ -17,7 +16,6 @@ public class CamaraScrip : MonoBehaviour
     //Variables
     float h, v;
     RaycastHit hit;
-    GameObject target;
     float hitdistance;
     Vector3 newposition;
     void Start()
@@ -42,16 +40,16 @@ public class CamaraScrip : MonoBehaviour
     }
     void FixedUpdate()
     {
-        CamColisions();
+        
     }
     private void LateUpdate()
     {
-        Coaliciones();
+        CamColisions();
         Vector3 look = transform.position + new Vector3(0, 1, 0);
         t_cam.LookAt(look);
         RotacionCam();
     }
-
+    
     void CamColisions()
     {
         hitdistance = 15;
@@ -70,30 +68,29 @@ public class CamaraScrip : MonoBehaviour
             hitdistance = 0;
         }
     }
-    void Coaliciones()
-    {
-        newposition = hit.point - Vector3.forward * 0.1f + Vector3.up * 0.8f;
-        if (hitdistance > 0)
-        {
-            t_cam.localPosition = newposition;
-        }
-    }
     void RotacionCam()
     {
         h = Input.GetAxis("Mouse X");
         v = Input.GetAxis("Mouse Y");
         //Lo saco porque no estoy seguro lo que modifica, puede se que con skins lo averigue.
-            //if (h != 0)
-            //{
-            //    transform.Rotate(Vector3.up, h * 90 * Sensibilidad_X * Time.deltaTime);
-            //}
-            //if (v != 0)
-            //{
-            //    t_cam.RotateAround(transform.position, transform.right, v * 90 * Sensibilidad_Y * Time.deltaTime);
-            //}
-
+        //if (h != 0)
+        //{
+        //    transform.Rotate(Vector3.up, h * 90 * Sensibilidad_X * Time.deltaTime);
+        //}
+        //if (v != 0)
+        //{
+        //    t_cam.RotateAround(transform.position, transform.right, v * 90 * Sensibilidad_Y * Time.deltaTime);
+        //}
         cam_offset = Quaternion.AngleAxis(h * Sensibilidad_X, Vector3.up) * cam_offset;
-        t_cam.localPosition = Vector3.Lerp(t_cam.localPosition, transform.position + cam_offset, latencia);
+        if (hitdistance > 0)
+        {
+            newposition = hit.point - Vector3.forward * 0.1f + Vector3.up * 0.8f;
+        }
+        else
+        {
+            newposition = transform.position + cam_offset;
+        }
+        t_cam.localPosition = Vector3.Lerp(t_cam.localPosition, newposition, latencia);
             //Vector3 ea = t_cam.rotation.eulerAngles;
             //t_cam.rotation = Quaternion.Euler(new Vector3(ea.x, ea.y, 0));
     }

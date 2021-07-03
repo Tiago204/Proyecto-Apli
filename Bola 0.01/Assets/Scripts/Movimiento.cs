@@ -6,11 +6,13 @@ public class Movimiento : MonoBehaviour
 {
     [Header("Pre-Game Conf")]
     public Rigidbody rb;
-    public CamaraScrip camaraScrip;
     public Camera maincam;
     [Header("Configuración")]
     public float fuerza;
+    public float MaxAcceleration;
+    //public float MaxVelocity;
     //Variables
+    //float velocidad;
     bool puedosaltar;
     float h, v;
     Vector3 movinput;
@@ -40,17 +42,16 @@ public class Movimiento : MonoBehaviour
         movinput = new Vector3(h, 0, v);
         movinput = Vector3.ClampMagnitude(movinput, 1);
 
-        movvector = movinput.x * camright + movinput.z * camforward;
-
-            rb.AddForce(movvector * fuerza * Time.deltaTime);
-
-
-
+        movvector += movinput.x * camright + movinput.z * camforward;
+        movvector = Vector3.ClampMagnitude(movvector, MaxAcceleration);
+        rb.AddForce(movvector * fuerza * Time.deltaTime, ForceMode.Force);
+        
         if (Input.GetKey("space") && puedosaltar == true)
         {
             puedosaltar = false;
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
         }
+        Debug.Log(rb.velocity.magnitude);
     }
     void camDirection()
     {
