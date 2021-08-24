@@ -18,6 +18,7 @@ public class CamaraScrip : MonoBehaviour
     RaycastHit hit;
     float hitdistance;
     Vector3 newposition;
+    Vector3 lastposition;
     void Start()
     {
         if (blockcursor)
@@ -32,6 +33,7 @@ public class CamaraScrip : MonoBehaviour
         }
         Vector3 look = transform.position + new Vector3(0, 1, 0);
         t_cam.LookAt(look);
+        Invoke("Timer", 1f);
     }
     private void Update()
     {
@@ -41,6 +43,10 @@ public class CamaraScrip : MonoBehaviour
     void FixedUpdate()
     {
         
+    }
+    void Timer()
+    {
+        Invoke("Timer", 1f);
     }
     private void LateUpdate()
     {
@@ -91,8 +97,8 @@ public class CamaraScrip : MonoBehaviour
             newposition = transform.position + cam_offset;
         }
         t_cam.localPosition = Vector3.Lerp(t_cam.localPosition, newposition, latencia);
-            //Vector3 ea = t_cam.rotation.eulerAngles;
-            //t_cam.rotation = Quaternion.Euler(new Vector3(ea.x, ea.y, 0));
+        Vector3 ea = t_cam.rotation.eulerAngles;
+        t_cam.rotation = Quaternion.Euler(new Vector3(ea.x, ea.y, 0));
     }
     void Zoom()
     {

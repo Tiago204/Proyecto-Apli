@@ -25,13 +25,12 @@ public class Movimiento : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
-        Moviendo();
     }
     void FixedUpdate()
     {
+        Debug.Log(rb.velocity.magnitude);
+        Moviendo();
         camDirection();
-        
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -49,20 +48,15 @@ public class Movimiento : MonoBehaviour
 
         movvector = movinput.x * camright + movinput.z * camforward;
 
-
-
-
         //movvector = Vector3.ClampMagnitude(movvector, MaxAcceleration);
         rb.AddForce(movvector * fuerza * Time.deltaTime, ForceMode.Force);
         //rb.velocity += movvector * fuerza * Time.deltaTime;
-        //rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxAcceleration);
+        //rb.velocity = Vector3.ClampMagnitude(rb.velocity, MaxAcceleration); 
         if (Input.GetKey("space") && puedosaltar == true)
         {
             puedosaltar = false;
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 4, 0), ForceMode.Impulse);
         }
-        
-        
     }
     void camDirection()
     {
@@ -72,7 +66,7 @@ public class Movimiento : MonoBehaviour
         camforward.y = 0;
         camright.y = 0;
 
-        //camforward = camforward.normalized;
-        //camright = camright.normalized;
+        camforward = camforward.normalized;
+        camright = camright.normalized;
     }
 }
