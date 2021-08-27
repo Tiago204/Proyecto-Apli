@@ -10,9 +10,6 @@ public class Movimiento : MonoBehaviour
     [Header("Configuración")]
     public float fuerza;
     public float MaxAcceleration;
-    //public float MaxVelocity;
-    //Variables
-    //float velocidad;
     bool puedosaltar;
     float h, v;
     Vector3 movinput;
@@ -20,9 +17,6 @@ public class Movimiento : MonoBehaviour
     Vector3 camforward;
     Vector3 camright;
     void Start()
-    {
-    }
-    private void Update()
     {
     }
     void FixedUpdate()

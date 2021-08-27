@@ -18,7 +18,6 @@ public class CamJugador : MonoBehaviour
     RaycastHit hit;
     float hitdistance;
     Vector3 newposition;
-    //Vector3 lastposition;
     void Start()
     {
         if (blockcursor)
@@ -33,18 +32,10 @@ public class CamJugador : MonoBehaviour
         }
         Vector3 look = player.position + new Vector3(0, 1, 0);
         this.transform.LookAt(look);
-        //Invoke("Timer", 1f);
     }
     private void Update()
     {
         if (HabilitarZoom) { Zoom(); }    
-    }
-    void FixedUpdate()
-    { 
-    }
-    void Timer()
-    {
-        Invoke("Timer", 1f);
     }
     private void LateUpdate()
     {
@@ -76,15 +67,6 @@ public class CamJugador : MonoBehaviour
     {
         h = Input.GetAxis("Mouse X");
         v = Input.GetAxis("Mouse Y");
-        //Lo saco porque no estoy seguro lo que modifica, puede se que con skins lo averigue.
-        //if (h != 0)
-        //{
-        //    transform.Rotate(Vector3.up, h * 90 * Sensibilidad_X * Time.deltaTime);
-        //}
-        //if (v != 0)
-        //{
-        //    t_cam.RotateAround(transform.position, transform.right, v * 90 * Sensibilidad_Y * Time.deltaTime);
-        //}
         cam_offset = Quaternion.AngleAxis(h * Sensibilidad_X, Vector3.up) * cam_offset;
         if (hitdistance > 0)
         {
