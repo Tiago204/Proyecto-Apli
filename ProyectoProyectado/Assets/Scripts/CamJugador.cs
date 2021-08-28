@@ -18,6 +18,9 @@ public class CamJugador : MonoBehaviour
     RaycastHit hit;
     float hitdistance;
     Vector3 newposition;
+    private void Awake()
+    {
+    }
     void Start()
     {
         if (blockcursor)

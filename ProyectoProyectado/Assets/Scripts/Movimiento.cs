@@ -16,6 +16,9 @@ public class Movimiento : MonoBehaviour
     Vector3 movvector;
     Vector3 camforward;
     Vector3 camright;
+    private void Awake()
+    {
+    }
     void Start()
     {
     }
@@ -27,7 +30,7 @@ public class Movimiento : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Piso")
+        if (collision.gameObject.name == "Piso" || collision.gameObject.name == "ARight" || collision.gameObject.name == "ALeft" || collision.gameObject.name == "AForward" || collision.gameObject.name == "ABack" || collision.gameObject.name == "AUp")
         {
             puedosaltar = true;
         }
@@ -48,7 +51,7 @@ public class Movimiento : MonoBehaviour
         if (Input.GetKey("space") && puedosaltar == true)
         {
             puedosaltar = false;
-            rb.AddForce(new Vector3(0, 4, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
         }
     }
     void camDirection()

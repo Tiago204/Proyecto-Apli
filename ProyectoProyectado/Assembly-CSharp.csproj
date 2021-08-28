@@ -53,9 +53,13 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Coliciones.cs" />
     <Compile Include="Assets\Scripts\Movimiento.cs" />
-    <Compile Include="Assets\Scripts\CamJugador.cs" />
+    <Compile Include="Assets\Scripts\MovPatron.cs" />
     <Compile Include="Assets\Scripts\Coleccionable.cs" />
+    <Compile Include="Assets\Scripts\CamJugador.cs" />
+    <Compile Include="Assets\Scripts\ParaElJuego.cs" />
+    <Compile Include="Assets\ParaElMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -6,7 +6,7 @@ public class Coleccionable : MonoBehaviour
 {
     public Vector3 rotacion;
     public Vector3 posicion;
-    int subebaja = 1;
+    public int subebaja = 1;
     void Start()
     {
         Invoke("Timer", 1f);
@@ -18,7 +18,7 @@ public class Coleccionable : MonoBehaviour
     }
     void Timer()
     {
-        subebaja = subebaja * (-1);
+        subebaja = subebaja * -1;
         Invoke("Timer", 1f);
     }
     void Tranladar()
