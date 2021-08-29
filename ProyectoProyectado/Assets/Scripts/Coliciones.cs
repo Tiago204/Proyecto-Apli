@@ -6,7 +6,6 @@ public class Coliciones : MonoBehaviour
 {
     public Coleccionable Coleccionable;
     public Rigidbody rb;
-    float segundos = 1;
     float impulso = 10;
     int coleccionable = 0;
     
@@ -32,25 +31,20 @@ public class Coliciones : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, impulso, 0), ForceMode.Impulse);
         }
-        if (collision.gameObject.name == "Pared")
+        if (collision.gameObject.tag == "Pared" || collision.gameObject.tag == "IA" || collision.gameObject.name == "Vacio")
         {
             Time.timeScale = 0;
+            
         }
     }
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "Moneda")
         {
-            Debug.LogWarning(segundos);
-            other.transform.Translate(new Vector3(0, 0, 20) * Time.deltaTime);
-            segundos -= Time.deltaTime;
-            if (segundos < 0)
-            {
-                
-                Destroy(other.gameObject);
-                coleccionable++;
-                segundos = 1;
-            }
+            other.transform.Translate(new Vector3(0, 0, -3) * Time.deltaTime);
+            Destroy(other.gameObject, 0.5f);
+            
+            coleccionable++;
         }
     }
 }

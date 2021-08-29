@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888daa47720d40c41999de281d77bc39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotacion: {x: 0, y: 0, z: 45}
-  posicion: {x: 0, y: 0, z: 0.4}
+  rotacion: 45
+  posicion: 0.4
