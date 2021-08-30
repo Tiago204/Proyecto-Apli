@@ -53,14 +53,16 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Coliciones.cs" />
-    <Compile Include="Assets\Scripts\ParaElJuego.cs" />
-    <Compile Include="Assets\Scripts\Movimiento.cs" />
-    <Compile Include="Assets\Scripts\ParaElMenu.cs" />
-    <Compile Include="Assets\Scripts\MovPatron.cs" />
-    <Compile Include="Assets\Scripts\Coleccionable.cs" />
-    <Compile Include="Assets\Scripts\Rotacion.cs" />
-    <Compile Include="Assets\Scripts\CamJugador.cs" />
+    <Compile Include="Assets\Scripts\Level\Coliciones.cs" />
+    <Compile Include="Assets\Scripts\Level\Movimiento.cs" />
+    <Compile Include="Assets\Scripts\Menu\Boton.cs" />
+    <Compile Include="Assets\Scripts\Level\MovPatron.cs" />
+    <Compile Include="Assets\Scripts\Level\Coleccionable.cs" />
+    <Compile Include="Assets\Scripts\Level\Luz.cs" />
+    <Compile Include="Assets\Scripts\Menu\Rotacionluz.cs" />
+    <Compile Include="Assets\Scripts\ScriptManager.cs" />
+    <Compile Include="Assets\Scripts\Level\Rotacion.cs" />
+    <Compile Include="Assets\Scripts\Level\CamJugador.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
