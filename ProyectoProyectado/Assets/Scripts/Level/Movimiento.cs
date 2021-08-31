@@ -18,13 +18,13 @@ public class Movimiento : MonoBehaviour
     Vector3 camright;
     private void Awake()
     {
+
     }
     void Start()
     {
     }
     void FixedUpdate()
     {
-        Debug.Log(rb.velocity.magnitude);
         Moviendo();
         camDirection();
     }

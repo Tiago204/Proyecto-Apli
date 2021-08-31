@@ -36,13 +36,19 @@ public class Coliciones : MonoBehaviour
             ScriptManager.GameOver = true;
             rb.isKinematic = true;
         }
+        if (collision.gameObject.name == "Meta")
+        {
+            ScriptManager.Win = true;
+            rb.isKinematic = true;
+        }
     }
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.name == "Moneda")
         {
+            other.transform.position = new Vector3(this.transform.position.x, other.transform.position.y, this.transform.position.z);
             other.transform.Translate(new Vector3(0, 0, -3) * Time.deltaTime);
-            Destroy(other.gameObject, 0.5f);
+            Destroy(other.gameObject, 1f);
             
             coleccionable++;
         }

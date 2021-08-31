@@ -29,8 +29,8 @@ public class MovPatron : MonoBehaviour
     void Start()
     {
         //rotacion - tiempo - velocidad - velocidad de rotacion
-        patron.Add(new SMovimiento(0, 1, -3, 0));
-        patron.Add(new SMovimiento(0, 1, 3, 0));
+        patron.Add(new SMovimiento(0, 1, -4, 0));
+        patron.Add(new SMovimiento(0, 1, 4, 0));
 
         cantPasos = patron.Count;
         indice = 0;

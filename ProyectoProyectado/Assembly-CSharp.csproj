@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Level\Coliciones.cs" />
     <Compile Include="Assets\Scripts\Level\Movimiento.cs" />
-    <Compile Include="Assets\Scripts\Menu\Boton.cs" />
+    <Compile Include="Assets\Scripts\Boton.cs" />
     <Compile Include="Assets\Scripts\Level\MovPatron.cs" />
     <Compile Include="Assets\Scripts\Level\Coleccionable.cs" />
     <Compile Include="Assets\Scripts\Level\Luz.cs" />
