@@ -7,6 +7,7 @@ TagManager:
   - IA
   - Pared
   - PNiveles
+  - Piso
   layers:
   - Default
   - TransparentFX

@@ -30,7 +30,7 @@ public class Movimiento : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Piso" || collision.gameObject.name == "ARight" || collision.gameObject.name == "ALeft" || collision.gameObject.name == "AForward" || collision.gameObject.name == "ABack" || collision.gameObject.name == "AUp")
+        if (collision.gameObject.tag == "Piso" || collision.gameObject.name == "ARight" || collision.gameObject.name == "ALeft" || collision.gameObject.name == "AForward" || collision.gameObject.name == "ABack" || collision.gameObject.name == "AUp")
         {
             puedosaltar = true;
         }
