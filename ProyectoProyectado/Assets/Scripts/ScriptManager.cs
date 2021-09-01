@@ -100,4 +100,8 @@ public class ScriptManager : MonoBehaviour
     {
         pInterfaz.SetActive(false);
     }
+    public void Salir()
+    {
+        Application.Quit();
+    }
 }
