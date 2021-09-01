@@ -10,6 +10,7 @@ public class ScriptManager : MonoBehaviour
     public bool Win = false;
     public GameObject Gpanel;
     public GameObject Gpanel2;
+    public GameObject PanelSeguro;
     public Image panel;
     public Image panel2;
     public Text texto;
@@ -36,7 +37,7 @@ public class ScriptManager : MonoBehaviour
     {
         Gpanel.SetActive(false);
         Gpanel2.SetActive(false);
-
+        PanelSeguro.SetActive(false);
         i = 0;
         i2 = 0;
     }

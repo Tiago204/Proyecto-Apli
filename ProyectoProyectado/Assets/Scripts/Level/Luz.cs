@@ -7,6 +7,6 @@ public class Luz : MonoBehaviour
     public Transform jugador;
     private void Update()
     {
-        this.transform.position = jugador.position + new Vector3(0, 50, 0);
+        this.transform.position = jugador.position + new Vector3(0, 40, 0);
     }
 }
