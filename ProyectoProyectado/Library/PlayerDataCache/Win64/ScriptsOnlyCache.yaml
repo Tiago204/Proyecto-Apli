@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - Rotacion
     - Rotacionluz
     - ScriptManager
+    - Tiempo
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -55,8 +56,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -68,33 +67,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1792}
     - Class: 114
-      Script: {instanceID: 2116}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2560}
-    - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2562}
     - Class: 114
       Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2826}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 3072}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3354}
+      Script: {instanceID: 3074}
     - Class: 114
-      Script: {instanceID: 3516}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 4714}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 4952}
+      Script: {instanceID: 4716}
+    - Class: 114
+      Script: {instanceID: 4954}
+    - Class: 114
+      Script: {instanceID: 17142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,25 +152,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 2116}
+      Script: {instanceID: 1934}
     - Class: 114
-      Script: {instanceID: 2442}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 3072}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 3074}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 3914}
     - Class: 114
-      Script: {instanceID: 34344}
+      Script: {instanceID: 3944}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -227,7 +228,7 @@ ScriptsOnlyBuild:
     className: PreferenceDictionary
   - hash:
       serializedVersion: 2
-      Hash: 6681b14ea248e59a8613f382b22b909f
+      Hash: 2056fe18a910d273d2651159aab31b91
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Coliciones
@@ -285,6 +286,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 238f7b9710832ca8d5a5137fb00753f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PanelesMenu
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -731,10 +738,10 @@ ScriptsOnlyBuild:
     className: CamJugador
   - hash:
       serializedVersion: 2
-      Hash: 238f7b9710832ca8d5a5137fb00753f8
+      Hash: 008d986f50b2acc4cf8f0bd87d0bb7a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PanelesMenu
+    className: Tiempo
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

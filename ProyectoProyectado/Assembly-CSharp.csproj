@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Level\Coliciones.cs" />
     <Compile Include="Assets\Scripts\Level\Movimiento.cs" />
+    <Compile Include="Assets\Scripts\Menu\PanelesMenu.cs" />
     <Compile Include="Assets\Scripts\Boton.cs" />
     <Compile Include="Assets\Scripts\Level\ManagePanels.cs" />
     <Compile Include="Assets\Scripts\Level\MovPatron.cs" />
@@ -64,7 +65,7 @@
     <Compile Include="Assets\Scripts\ScriptManager.cs" />
     <Compile Include="Assets\Scripts\Level\Rotacion.cs" />
     <Compile Include="Assets\Scripts\Level\CamJugador.cs" />
-    <Compile Include="Assets\Scripts\Menu\PanelesMenu.cs" />
+    <Compile Include="Assets\Scripts\Level\Tiempo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

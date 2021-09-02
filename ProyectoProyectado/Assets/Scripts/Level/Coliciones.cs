@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Coliciones : MonoBehaviour
 {
     public Coleccionable Coleccionable;
     public Rigidbody rb;
     public ManagePanels ManagePanels;
+    public Tiempo Tiempo;
+    public Text TColec;
     float impulso = 10;
     int coleccionable = 0;
     private void OnCollisionEnter(Collision collision)
@@ -35,11 +38,13 @@ public class Coliciones : MonoBehaviour
         {
             ManagePanels.GameOver = true;
             rb.isKinematic = true;
+            Tiempo.Fin = true;
         }
         if (collision.gameObject.name == "Meta")
         {
             ManagePanels.Win = true;
             rb.isKinematic = true;
+            Tiempo.Fin = true;
         }
     }
     public void OnTriggerStay(Collider other)
@@ -48,9 +53,15 @@ public class Coliciones : MonoBehaviour
         {
             other.transform.position = new Vector3(this.transform.position.x, other.transform.position.y, this.transform.position.z);
             other.transform.Translate(new Vector3(0, 0, -3) * Time.deltaTime);
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Moneda")
+        {
             Destroy(other.gameObject, 1f);
-            
             coleccionable++;
+            TColec.text = "Coleccionable: " + coleccionable + "/1";
         }
     }
 }
