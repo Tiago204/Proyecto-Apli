@@ -7,6 +7,7 @@ public class Movimiento : MonoBehaviour
     [Header("Pre-Game Conf")]
     public Rigidbody rb;
     public Camera maincam;
+    public ScriptManager ScriptManager;
     [Header("Configuración")]
     public float fuerza;
     public float MaxAcceleration;
@@ -37,16 +38,46 @@ public class Movimiento : MonoBehaviour
     }
     void Moviendo()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
-        movinput = new Vector3(h, 0, v);
-        movinput.Normalize();
-
-        movvector = movinput.x * camright + movinput.z * camforward;
-        if (rb.velocity.magnitude < MaxAcceleration)
+        if (ScriptManager.TipoTeclado)
         {
-            rb.AddForce(movvector * fuerza, ForceMode.Force);
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+            movinput = new Vector3(h, 0, v);
+            movinput.Normalize();
+            movvector = movinput.x * camright + movinput.z * camforward;
+            if (rb.velocity.magnitude < MaxAcceleration)
+            {
+                rb.AddForce(movvector * fuerza, ForceMode.Force);
+            }
         }
+        else
+        {
+
+            if (Input.GetKey("left"))
+            {
+                movvector = -1 * camright + 0 * camforward;
+                rb.AddForce(movvector * fuerza, ForceMode.Force);
+
+            }
+            if (Input.GetKey("right"))
+            {
+                movvector = 1 * camright + 0 * camforward;
+                rb.AddForce(movvector * fuerza, ForceMode.Force);
+            }
+            if (Input.GetKey("down"))
+            {
+                movvector = 0 * camright + -1 * camforward;
+                rb.AddForce(movvector * fuerza, ForceMode.Force);
+            }
+            if (Input.GetKey("up"))
+            {
+                movvector = 0 * camright + 1 * camforward;
+                rb.AddForce(movvector * fuerza, ForceMode.Force);
+            }
+        }
+        
+
+        
 
         if (Input.GetKey("space") && puedosaltar == true)
         {

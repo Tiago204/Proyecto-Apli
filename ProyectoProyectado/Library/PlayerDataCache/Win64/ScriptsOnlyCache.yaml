@@ -6,15 +6,15 @@ ScriptsOnlyBuild:
     - Coleccionable
     - Coliciones
     - Luz
+    - ManagePanels
     - MovPatron
     - Movimiento
+    - PanelesMenu
     - Rotacion
     - Rotacionluz
     - ScriptManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -55,42 +55,46 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 1638}
+      Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1792}
     - Class: 114
-      Script: {instanceID: 2114}
+      Script: {instanceID: 2116}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2442}
     - Class: 114
-      Script: {instanceID: 2558}
+      Script: {instanceID: 2560}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2688}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 2966}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3512}
+      Script: {instanceID: 3354}
     - Class: 114
-      Script: {instanceID: 3938}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 4710}
+      Script: {instanceID: 3942}
     - Class: 114
-      Script: {instanceID: 4948}
+      Script: {instanceID: 4714}
+    - Class: 114
+      Script: {instanceID: 4952}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,32 +144,32 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 2114}
+      Script: {instanceID: 2116}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2442}
     - Class: 114
-      Script: {instanceID: 2558}
+      Script: {instanceID: 2560}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2688}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2966}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3908}
+      Script: {instanceID: 3912}
     - Class: 114
-      Script: {instanceID: 3938}
+      Script: {instanceID: 3942}
+    - Class: 114
+      Script: {instanceID: 34344}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,7 +227,7 @@ ScriptsOnlyBuild:
     className: PreferenceDictionary
   - hash:
       serializedVersion: 2
-      Hash: 79bf16daab28f509d7acaf43234454cc
+      Hash: 6681b14ea248e59a8613f382b22b909f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Coliciones
@@ -271,7 +275,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: caa67004e17c4d5bbfda0b9a3f286045
+      Hash: 6568bbb56b99d42cacdec8b55a7c19b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movimiento
@@ -359,6 +363,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boton
+  - hash:
+      serializedVersion: 2
+      Hash: 794fab530d691dba30a9dbb502ec65c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManagePanels
   - hash:
       serializedVersion: 2
       Hash: d6a8e9bec3160a152b9b2710593d3caa
@@ -607,7 +617,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 794fab530d691dba30a9dbb502ec65c4
+      Hash: 05611f15be2d28deea5872fa5c5c2fc4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptManager
@@ -715,10 +725,16 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: c4aa165d4ff822718f68aadc32b290d7
+      Hash: 85b2555cb1f11fa2023244c2b272c47b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CamJugador
+  - hash:
+      serializedVersion: 2
+      Hash: 238f7b9710832ca8d5a5137fb00753f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PanelesMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

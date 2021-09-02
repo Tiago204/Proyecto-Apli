@@ -6,6 +6,7 @@ public class CamJugador : MonoBehaviour
 {
     [Header("Pre-Game Conf")]
     public Transform player;
+    public ScriptManager ScriptManager;
     [Header("Configuración")]
     public float Sensibilidad_X;
     public float Sensibilidad_Y;
@@ -15,6 +16,7 @@ public class CamJugador : MonoBehaviour
     public bool HabilitarZoom;
     //Variables
     float h, v;
+    bool Left, Right;
     RaycastHit hit;
     float hitdistance;
     Vector3 newposition;
@@ -68,8 +70,22 @@ public class CamJugador : MonoBehaviour
     }
     void RotacionCam()
     {
-        h = Input.GetAxis("Mouse X");
-        v = Input.GetAxis("Mouse Y");
+        if (ScriptManager.TipoTeclado)
+        {
+            h = Input.GetAxis("Mouse X");
+            v = Input.GetAxis("Mouse Y");
+        }
+        else
+        {
+            Left = Input.GetKey("a");
+            Right = Input.GetKey("d");
+            if (Left)
+                h = -1;
+            else if (Right)
+                h = 1;
+            else
+                h = 0;
+        }
         cam_offset = Quaternion.AngleAxis(h * Sensibilidad_X, Vector3.up) * cam_offset;
         if (hitdistance > 0)
         {
