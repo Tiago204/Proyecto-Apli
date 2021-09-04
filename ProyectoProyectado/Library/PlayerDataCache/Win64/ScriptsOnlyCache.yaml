@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Coleccionable
     - Coliciones
     - Luz
+    - ManagOpciones
     - ManagePanels
     - MovPatron
     - Movimiento
@@ -27,6 +28,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Level1.unity:
@@ -61,41 +66,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1540}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1640}
+      Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 1792}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2748}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2842}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3370}
     - Class: 114
-      Script: {instanceID: 3518}
+      Script: {instanceID: 3532}
     - Class: 114
-      Script: {instanceID: 3944}
+      Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 4716}
+      Script: {instanceID: 4354}
     - Class: 114
-      Script: {instanceID: 4954}
+      Script: {instanceID: 4734}
     - Class: 114
-      Script: {instanceID: 17142}
+      Script: {instanceID: 4972}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,32 +150,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1540}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1934}
+      Script: {instanceID: 1946}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 2748}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3914}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 3944}
+      Script: {instanceID: 3928}
+    - Class: 114
+      Script: {instanceID: 3950}
+    - Class: 114
+      Script: {instanceID: 3958}
+    - Class: 114
+      Script: {instanceID: 4112}
+    - Class: 114
+      Script: {instanceID: 4204}
+    - Class: 114
+      Script: {instanceID: 4470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -276,7 +293,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 6568bbb56b99d42cacdec8b55a7c19b8
+      Hash: 598f5bec4c63967313a80faea319d940
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movimiento
@@ -394,6 +411,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Nada
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -624,7 +647,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 05611f15be2d28deea5872fa5c5c2fc4
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptManager
@@ -678,10 +701,22 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 008d986f50b2acc4cf8f0bd87d0bb7a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tiempo
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 05611f15be2d28deea5872fa5c5c2fc4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManagOpciones
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -732,16 +767,10 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 85b2555cb1f11fa2023244c2b272c47b
+      Hash: 5df466b0da6cb3a3f4cb9e131e557b19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CamJugador
-  - hash:
-      serializedVersion: 2
-      Hash: 008d986f50b2acc4cf8f0bd87d0bb7a9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Tiempo
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

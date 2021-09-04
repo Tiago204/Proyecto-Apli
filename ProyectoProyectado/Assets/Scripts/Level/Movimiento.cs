@@ -7,7 +7,7 @@ public class Movimiento : MonoBehaviour
     [Header("Pre-Game Conf")]
     public Rigidbody rb;
     public Camera maincam;
-    public ScriptManager ScriptManager;
+    public ManagOpciones ManagOpciones;
     [Header("Configuración")]
     public float fuerza;
     public float MaxAcceleration;
@@ -38,7 +38,7 @@ public class Movimiento : MonoBehaviour
     }
     void Moviendo()
     {
-        if (ScriptManager.TipoTeclado)
+        if (ManagOpciones.TipoTeclado == 0)
         {
             h = Input.GetAxis("Horizontal");
             v = Input.GetAxis("Vertical");

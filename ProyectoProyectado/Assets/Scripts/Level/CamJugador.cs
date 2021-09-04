@@ -6,7 +6,7 @@ public class CamJugador : MonoBehaviour
 {
     [Header("Pre-Game Conf")]
     public Transform player;
-    public ScriptManager ScriptManager;
+    public ManagOpciones ManagOpciones;
     [Header("Configuración")]
     public float Sensibilidad_X;
     public float Sensibilidad_Y;
@@ -70,7 +70,7 @@ public class CamJugador : MonoBehaviour
     }
     void RotacionCam()
     {
-        if (ScriptManager.TipoTeclado)
+        if (ManagOpciones.TipoTeclado == 0)
         {
             h = Input.GetAxis("Mouse X");
             v = Input.GetAxis("Mouse Y");

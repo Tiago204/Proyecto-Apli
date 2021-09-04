@@ -63,9 +63,11 @@
     <Compile Include="Assets\Scripts\Level\Luz.cs" />
     <Compile Include="Assets\Scripts\Menu\Rotacionluz.cs" />
     <Compile Include="Assets\Scripts\ScriptManager.cs" />
+    <Compile Include="Assets\Scripts\Level\Tiempo.cs" />
     <Compile Include="Assets\Scripts\Level\Rotacion.cs" />
     <Compile Include="Assets\Scripts\Level\CamJugador.cs" />
-    <Compile Include="Assets\Scripts\Level\Tiempo.cs" />
+    <Compile Include="Assets\Scripts\Nada.cs" />
+    <Compile Include="Assets\Scripts\ManagOpciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
