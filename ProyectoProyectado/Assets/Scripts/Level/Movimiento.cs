@@ -17,13 +17,6 @@ public class Movimiento : MonoBehaviour
     Vector3 movvector;
     Vector3 camforward;
     Vector3 camright;
-    private void Awake()
-    {
-
-    }
-    void Start()
-    {
-    }
     void FixedUpdate()
     {
         Moviendo();
@@ -75,10 +68,6 @@ public class Movimiento : MonoBehaviour
                 rb.AddForce(movvector * fuerza, ForceMode.Force);
             }
         }
-        
-
-        
-
         if (Input.GetKey("space") && puedosaltar == true)
         {
             puedosaltar = false;

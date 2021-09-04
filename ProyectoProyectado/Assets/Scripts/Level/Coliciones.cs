@@ -7,7 +7,7 @@ public class Coliciones : MonoBehaviour
 {
     public Coleccionable Coleccionable;
     public Rigidbody rb;
-    public ManagePanels ManagePanels;
+    public ManageNiveles manageNiveles;
     public Tiempo Tiempo;
     public Text TColec;
     float impulso = 10;
@@ -36,13 +36,13 @@ public class Coliciones : MonoBehaviour
         }
         if (collision.gameObject.tag == "Pared" || collision.gameObject.tag == "IA" || collision.gameObject.name == "Vacio")
         {
-            ManagePanels.GameOver = true;
+            manageNiveles.GameOver = true;
             rb.isKinematic = true;
             Tiempo.Fin = true;
         }
         if (collision.gameObject.name == "Meta")
         {
-            ManagePanels.Win = true;
+            manageNiveles.Win = true;
             rb.isKinematic = true;
             Tiempo.Fin = true;
         }
