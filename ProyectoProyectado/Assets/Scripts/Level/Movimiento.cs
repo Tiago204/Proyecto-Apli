@@ -7,7 +7,7 @@ public class Movimiento : MonoBehaviour
     [Header("Pre-Game Conf")]
     public Rigidbody rb;
     public Camera maincam;
-    public ManagOpciones ManagOpciones;
+    public ManagOpciones managOpciones;
     [Header("Configuración")]
     public float fuerza;
     public float MaxAcceleration;
@@ -31,7 +31,7 @@ public class Movimiento : MonoBehaviour
     }
     void Moviendo()
     {
-        if (ManagOpciones.TipoTeclado == 0)
+        if (managOpciones.TipoTeclado == 0)
         {
             h = Input.GetAxis("Horizontal");
             v = Input.GetAxis("Vertical");
@@ -68,10 +68,21 @@ public class Movimiento : MonoBehaviour
                 rb.AddForce(movvector * fuerza, ForceMode.Force);
             }
         }
-        if (Input.GetKey("space") && puedosaltar == true)
-        {
-            puedosaltar = false;
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+        if (ManagOpciones.noSalto == false)
+        { 
+            if (ManagOpciones.salto)
+            {
+                if (puedosaltar)
+                {
+                    rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+                    puedosaltar = false;
+                }
+            }
+            else if (Input.GetKey("space") && puedosaltar == true)
+            {
+                puedosaltar = false;
+                rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            }
         }
     }
     void camDirection()

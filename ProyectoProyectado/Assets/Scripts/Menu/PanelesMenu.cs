@@ -19,6 +19,9 @@ public class PanelesMenu : MonoBehaviour
     public TMP_Dropdown dropdown;
     public int Calidad;
 
+    public GameObject TildeSalto;
+    public GameObject TildeNoSalto;
+
     private void Start()
     {
         PNiveles.SetActive(false);
@@ -45,6 +48,14 @@ public class PanelesMenu : MonoBehaviour
             Teclado1.interactable = true;
             Teclado2.interactable = false;
         }
+        if (ManagOpciones.salto)
+            TildeSalto.SetActive(true);
+        else
+            TildeSalto.SetActive(false);
+        if (ManagOpciones.noSalto)
+            TildeNoSalto.SetActive(true);
+        else
+            TildeNoSalto.SetActive(false);
     }
 
     public void SiInteract(Button Boton)

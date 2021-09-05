@@ -35,12 +35,14 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
@@ -79,6 +81,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1528}
     - Class: 114
       Script: {instanceID: 1680}
+    - Class: 114
+      Script: {instanceID: 1754}
     - Class: 114
       Script: {instanceID: 1836}
     - Class: 114
@@ -177,6 +181,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1696}
     - Class: 114
+      Script: {instanceID: 1754}
+    - Class: 114
       Script: {instanceID: 1840}
     - Class: 114
       Script: {instanceID: 1982}
@@ -202,6 +208,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3044}
     - Class: 114
       Script: {instanceID: 3138}
+    - Class: 114
+      Script: {instanceID: 3810}
     - Class: 114
       Script: {instanceID: 3998}
     - Class: 114
@@ -343,7 +351,7 @@ ScriptsOnlyBuild:
     className: WarpTextExample
   - hash:
       serializedVersion: 2
-      Hash: 598f5bec4c63967313a80faea319d940
+      Hash: 862e86df8ad3cc32607f7b7546cf63de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movimiento
@@ -367,7 +375,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: 5515c81f586c20f931a19565191d6b0e
+      Hash: e50f938eb53c64a4a01c884b22c3124e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PanelesMenu
@@ -883,7 +891,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 26e697c6bc9132a4fe57b81452a4c3eb
+      Hash: f317757d5767cc5d14dc9f39ea73421a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ManagOpciones
