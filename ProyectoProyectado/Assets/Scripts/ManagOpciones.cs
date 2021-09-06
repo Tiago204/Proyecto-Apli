@@ -12,6 +12,11 @@ public class ManagOpciones : MonoBehaviour
     public Image PBrillo;
     public Light luz;
 
+    public PanelesMenu panelesMenu;
+
+    public AudioSource audioSource;
+    public AudioClip Syn;
+
     static public bool salto;
     static public bool noSalto;
 
@@ -28,6 +33,19 @@ public class ManagOpciones : MonoBehaviour
         else
         {
             luz.intensity = slider.value;
+        }
+    }
+    void Update()
+    {
+    switch(panelesMenu.dropdownM.value)
+        {
+            case 0: 
+                audioSource.mute=true;
+                break;
+            case 1:
+                audioSource.clip = Syn;
+                audioSource.mute = false;
+                break;
         }
     }
     public void Teclado(int Tipo)

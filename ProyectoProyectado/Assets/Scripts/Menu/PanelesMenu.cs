@@ -19,6 +19,9 @@ public class PanelesMenu : MonoBehaviour
     public TMP_Dropdown dropdown;
     public int Calidad;
 
+    public TMP_Dropdown dropdownM;
+    public int Musica;
+
     public GameObject TildeSalto;
     public GameObject TildeNoSalto;
 
@@ -29,6 +32,10 @@ public class PanelesMenu : MonoBehaviour
         POpciones.SetActive(false);
         BMovimiento.interactable = false;
         PMovimiento.SetActive(true);
+
+        Musica = PlayerPrefs.GetInt("doors",0);
+        dropdown.value = Musica;
+        MusicaImposible();
 
         Calidad = PlayerPrefs.GetInt("numDeCalidad", 3);
         dropdown.value = Calidad;
@@ -67,5 +74,11 @@ public class PanelesMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(dropdown.value);
         PlayerPrefs.SetInt("numDeCalidad", dropdown.value);
         Calidad = dropdown.value;
+    }
+    public void MusicaImposible()
+    {
+        QualitySettings.SetQualityLevel(dropdownM.value);
+        PlayerPrefs.SetInt("doors", dropdownM.value);
+        Musica = dropdownM.value;
     }
 }
